@@ -9,11 +9,14 @@
         </div>
 
         <div>
-            <p>published: 7.10.2017</p>
-            <h2><a href="">My first post</a></h2>
-            <p>This is my first code with html, lets see how it goes.
-
-        <div>
+          {% for post in posts %}
+              <div>
+                  <p>published: {{ post.published_date }}</p>
+                  <h1><a href="">{{ post.title }}</a></h1>
+                  <p>{{ post.text|linebreaksbr }}</p>
+              </div>
+          {% endfor %}
+        </div>
 
     </body>
 </html>
